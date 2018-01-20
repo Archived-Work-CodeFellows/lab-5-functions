@@ -31,11 +31,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+ problem-2
   //eslint-disable-line
   var product = a*b;
   var msg = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';;
   var result = [a*b,msg];
   return result;
+
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -56,11 +58,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-  //eslint-disable-line
+	//eslint-disable-line
+  var msgSum = '4 and 7 and 5 sum to 16.';
+  var msgProduct = 'The product of 4 and 7 and 5 is 140.';
+  var results = [sum(sum(a,b),c),multiply(multiply(a,b),c),msgSum,msgProduct];
+  return results;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
