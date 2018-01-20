@@ -85,8 +85,8 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 function sumArray(testArray) {
   //eslint-disable-line
   var clone = testArray.slice(0);
-  var msg = '2,3,4 was passed in as an array of numbers, and 9 is their sum.';
-  var result = [sum(sum(clone[0],clone[1]),clone[2]), msg];
+  var msg = clone[0]+','+clone[1]+','+clone[2]+' was passed in as an array of numbers, and '+ sum(sum(clone[0],clone[1])[0],clone[2])[0]+' is their sum.';
+  var result = [sum(sum(clone[0],clone[1])[0],clone[2])[0], msg];
   return result;
 }
 
