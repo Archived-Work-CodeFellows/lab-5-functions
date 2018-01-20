@@ -9,10 +9,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-	//eslint-disable-line
-  var msg = 'The sum of 4 and 7 is 11.';
-  var sum = [a+b, msg];
-  return sum;
+  //eslint-disable-line
+  var sum = a+b;
+  var msg = 'The sum of ' + a + ' and ' + b + ' is ' + sum + '.';
+  var result = [a+b,msg];
+  return result;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,10 +31,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-	//eslint-disable-line
-  var msg = 'The product of 5 and 9 is 45.';
-  var multiply = [a*b,msg];
-  return multiply;
+  //eslint-disable-line
+  var product = a*b;
+  var msg = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';;
+  var result = [a*b,msg];
+  return result;
 }
 
 // Here is the test for multiply(); uncomment it to run it
