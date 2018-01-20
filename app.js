@@ -31,10 +31,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
- problem-2
   //eslint-disable-line
   var product = a*b;
-  var msg = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';;
+  var msg = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
   var result = [a*b,msg];
   return result;
 
@@ -59,9 +58,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a, b, c) {
 	//eslint-disable-line
-  var msgSum = '4 and 7 and 5 sum to 16.';
-  var msgProduct = 'The product of 4 and 7 and 5 is 140.';
-  var results = [sum(sum(a,b),c),multiply(multiply(a,b),c),msgSum,msgProduct];
+  var msgSum = a +' and '+ b +' and '+ c +' sum to '+ sum(sum(a,b)[0],c)[0] +'.';
+  var msgProduct = 'The product of '+ a +' and '+ b +' and '+ c +' is '+ multiply(multiply(a,b)[0],c)[0] +'.';
+  var results = [sum(sum(a,b)[0],c)[0],multiply(multiply(a,b)[0],c)[0],msgSum,msgProduct];
   return results;
 }
 
@@ -85,11 +84,15 @@ var testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(testArray) {
   //eslint-disable-line
+  var clone = testArray.slice(0);
+  var msg = clone[0]+','+clone[1]+','+clone[2]+' was passed in as an array of numbers, and '+ sum(sum(clone[0],clone[1])[0],clone[2])[0]+' is their sum.';
+  var result = [sum(sum(clone[0],clone[1])[0],clone[2])[0], msg];
+  return result;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
