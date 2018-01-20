@@ -36,6 +36,7 @@ function multiply(a, b) {
   var msg = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';;
   var result = [a*b,msg];
   return result;
+
 }
 
 // Here is the test for multiply(); uncomment it to run it
